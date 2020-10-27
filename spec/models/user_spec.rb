@@ -46,6 +46,11 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("Password Include both letters and numbers")
     end
+    it 'passwordが数字だけだと保存できないこと' do
+      @user.password = '111111'
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Password Include both letters and numbers")
+    end
     it 'password_confirmationが空だと保存できないこと' do
       @user.password_confirmation = ''
       @user.valid?
