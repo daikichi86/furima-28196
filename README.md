@@ -29,23 +29,26 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string | null: false |
+| nickname | string | null: false |
 | email    | string | null: false |
-| password | string | null: false |
+| encrypted_password | string | null: false |
+| last_name | string | null: false |
+| first_name | string | null: false |
+| last_name_kana | string | null: false |
+| first_name_kana | string | null: false |
+| birth_date | datetime | null: false |
 
 ### Association
 
-- has many items
-- has many records
-- has one streets
+- has_many items
+- has_many records
 
 ## items テーブル
 
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
-| image  | text   | ----------- |
 | name   | string | null: false |
-| info   | string | null: false |
+| info   | text | null: false |
 | category_id     | integer | null: false |
 | sales_status_id | integer | null: false |
 | shipping_fee_status_id | integer | null: false |
@@ -53,36 +56,37 @@ Things you may want to cover:
 | scheduled_delivery_id | integer | null:false |
 | price  | integer | null:false |
 
+| user_id  | references | null: false, foreign_key: true |
+
 ### Association
 
-- belongs to users
-- has one records
+- belongs_to users
+- has_one records
 
 ## records テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
+| user_id   | references | null: false, foreign_key: true |
+| item_id   | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to items
 - belongs_to users
-- has many streets
+- has_one streets
 
 ## streets テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| postal_code | integer | null: false |
+| postal_code | string | null: false |
 | prefecture  | string | null: false |
 | city        | string | null: false |
 | addresses   | string | null: false |
 | building    | string | null: false |
-| phone_number | integer | null: false
+| phone_number | string | null: false |
 
 ### Association
 
 - belongs_to records
-- belongs_to users
