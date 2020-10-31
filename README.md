@@ -36,7 +36,7 @@ Things you may want to cover:
 | first_name | string | null: false |
 | last_name_kana | string | null: false |
 | first_name_kana | string | null: false |
-| birth_date | date型 | null: false |
+| birth_date | date | null: false |
 
 ### Association
 
@@ -56,7 +56,7 @@ Things you may want to cover:
 | scheduled_delivery_id | integer | null:false |
 | price  | integer | null:false |
 
-| user_id  | references | null: false, foreign_key: true |
+| user | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -67,8 +67,8 @@ Things you may want to cover:
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| user_id   | references | null: false, foreign_key: true |
-| item_id   | references | null: false, foreign_key: true |
+| user   | references | null: false, foreign_key: true |
+| item   | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -81,12 +81,13 @@ Things you may want to cover:
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | postal_code | string | null: false |
-| prefecture  | string | null: false |
+| prefecture_id  | integer | null: false |
 | city        | string | null: false |
 | addresses   | string | null: false |
 | building    | string |             |
 | phone_number | string | null: false |
-| record_id | references | null:false |
+
+| record | references | null:false, foreign_key: true |
 
 ### Association
 
