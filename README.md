@@ -36,7 +36,7 @@ Things you may want to cover:
 | first_name | string | null: false |
 | last_name_kana | string | null: false |
 | first_name_kana | string | null: false |
-| birth_date | datetime | null: false |
+| birth_date | date型 | null: false |
 
 ### Association
 
@@ -60,8 +60,8 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to users
-- has_one records
+- belongs_to user
+- has_one record
 
 ## records テーブル
 
@@ -72,9 +72,9 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to items
-- belongs_to users
-- has_one streets
+- belongs_to item
+- belongs_to user
+- has_one street
 
 ## streets テーブル
 
@@ -84,9 +84,10 @@ Things you may want to cover:
 | prefecture  | string | null: false |
 | city        | string | null: false |
 | addresses   | string | null: false |
-| building    | string | null: false |
+| building    | string |             |
 | phone_number | string | null: false |
+| record_id | references | null:false |
 
 ### Association
 
-- belongs_to records
+- belongs_to record
