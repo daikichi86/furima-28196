@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'モデル単体テストコード' do
+  describe 'ログイン機能' do
     before do
       @user = FactoryBot.build(:user)
     end
