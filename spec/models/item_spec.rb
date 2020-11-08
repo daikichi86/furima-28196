@@ -7,6 +7,10 @@ RSpec.describe Item, type: :model do
 
   describe '商品出品機能' do
     
+    it "全ての条件を満たしていればツイートは保存される" do
+      expect(@item).to be_valid
+    end
+
     it "imageが無いと登録できない" do
       @item.image = nil
       @item.valid?
