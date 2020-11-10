@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2020-10-31T08:00:00.284Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" version="13.6.5" etag="E3qBV5qUnxnNajkZHJKO">
+<mxfile host="65bd71144e" modified="2020-10-31T12:50:13.232Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.1 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" version="13.6.5" etag="Gtcy2DTXLua2rLDpPe8c">
     <diagram id="XwZHdghfiyvHQSKYb_OS" name="ページ1">
         <mxGraphModel dx="968" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -52,7 +52,7 @@
                 <mxCell id="68" value="price(販売価格)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="11" vertex="1">
                     <mxGeometry y="166" width="250" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="75" value="&amp;nbsp;user_id" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="11" vertex="1">
+                <mxCell id="75" value="&amp;nbsp;user_id" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="11">
                     <mxGeometry y="186" width="250" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="users" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -67,19 +67,19 @@
                 <mxCell id="9" value="encrypted_password" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
                     <mxGeometry y="78" width="140" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="&amp;nbsp;last_name" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="6" vertex="1">
+                <mxCell id="77" value="&amp;nbsp;last_name" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6">
                     <mxGeometry y="104" width="140" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="&amp;nbsp;first_name" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="6" vertex="1">
+                <mxCell id="78" value="&amp;nbsp;first_name" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6">
                     <mxGeometry y="124" width="140" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="&amp;nbsp;last_name_kana" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="6" vertex="1">
+                <mxCell id="79" value="&amp;nbsp;last_name_kana" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6">
                     <mxGeometry y="144" width="140" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="&amp;nbsp;first_name_kana" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="6" vertex="1">
+                <mxCell id="80" value="&amp;nbsp;first_name_kana" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6">
                     <mxGeometry y="164" width="140" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" value="&amp;nbsp;birth_date" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="6" vertex="1">
+                <mxCell id="81" value="&amp;nbsp;birth_date" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="6">
                     <mxGeometry y="184" width="140" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="73" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;endSize=20;targetPerimeterSpacing=0;startSize=20;entryX=-0.006;entryY=-0.077;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="17" edge="1">
@@ -100,7 +100,7 @@
                 <mxCell id="17" value="item_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="15" vertex="1">
                     <mxGeometry y="52" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.014;entryY=0.808;entryDx=0;entryDy=0;entryPerimeter=0;endSize=20;startSize=20;" parent="1" source="16" target="20" edge="1">
+                <mxCell id="76" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.014;entryY=0.808;entryDx=0;entryDy=0;entryPerimeter=0;endSize=20;startSize=20;" edge="1" parent="1" source="16" target="20">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="571.75" y="221.836" as="sourcePoint"/>
                         <mxPoint x="329.03999999999996" y="639.75" as="targetPoint"/>
@@ -127,7 +127,7 @@
                 <mxCell id="71" value="&lt;span style=&quot;color: rgb(255 , 255 , 255) ; font-family: &amp;#34;menlo&amp;#34; , monospace ; font-size: 11px ; text-align: left ; background-color: rgb(36 , 36 , 36)&quot;&gt;phone_number(電話番号)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="19" vertex="1">
                     <mxGeometry y="146" width="140" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="record_id" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="19" vertex="1">
+                <mxCell id="82" value="record_id" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="19">
                     <mxGeometry y="166" width="140" height="20" as="geometry"/>
                 </mxCell>
             </root>
