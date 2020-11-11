@@ -126,7 +126,8 @@
     <%= link_to '新規投稿商品', "#", class: "subtitle" %>
     <ul class='item-lists'>
 
-      <li class='list'>
+      <% if @items != nil %>
+       <li class='list'>
         <% @items.each do |item| %>
           <%= link_to item_path(item) do %>
           <div class='item-img-content'>
@@ -153,11 +154,10 @@
           </div>
           <% end %>
         <% end %>
-      </li>
+       </li>
 
-      <%# 商品がない場合のダミー %>
-      <%# 商品がある場合は表示されないようにしましょう %>
-      <li class='list'>
+      <% else %>
+       <li class='list'>
         <%= link_to '#' do %>
         <%= image_tag "https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/10/a004.png", class: "item-img" %>
         <div class='item-info'>
@@ -173,9 +173,9 @@
           </div>
         </div>
         <% end %>
-      </li>
-      <%# //商品がある場合は表示されないようにしましょう %>
-      <%# /商品がない場合のダミー %>
+       </li>
+      <% end %>
+
     </ul>
   </div>
   <%# /商品一覧 %>
