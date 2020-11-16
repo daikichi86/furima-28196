@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @items = Item.includes(:user).order("id DESC")
+    @item = Item.includes(:user).order("id DESC")
   end
 
   def new
@@ -23,6 +23,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      redirect_to @item
+    else
+      render action: :edit
+    end
+  end
+  
   private
 
   def item_params
