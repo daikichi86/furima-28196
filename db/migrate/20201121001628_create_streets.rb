@@ -6,7 +6,9 @@ class CreateStreets < ActiveRecord::Migration[6.0]
       t.string :city, null: false
       t.string :addresses, null:false
       t.string :building, null:false
-      t.integer :phone_number, null:false
+      t.string :phone_number, null:false
+
+      t.references :record, null: false, foreign_key: true
     end
   end
 end

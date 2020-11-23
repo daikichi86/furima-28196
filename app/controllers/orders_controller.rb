@@ -1,10 +1,12 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @item = Item.find(params[:item_id])
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Recordstreet.new(order_params)
     if @order.valid?
       @order.save
       redirect_to root_path
@@ -15,6 +17,6 @@ class OrdersController < ApplicationController
 
   private
     def order_params
-      params.require(:order).permit(:number, :exp_month, :exp_year, :cvc, :postal_code, :prefecture_id, :city, :addresses, :building, :phone_number)
+      params.permit(:number, :exp_month, :exp_year, :cvc, :postal_code, :prefecture_id, :city, :addresses, :building, :phone_number, :item_id).merge(user_id: current_user.id)
     end
 end
