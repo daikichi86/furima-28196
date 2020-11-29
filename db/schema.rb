@@ -47,12 +47,9 @@ ActiveRecord::Schema.define(version: 2020_11_21_001628) do
   end
 
   create_table "records", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "number", null: false
-    t.integer "exp_month", null: false
-    t.integer "exp_year", null: false
-    t.integer "cvc", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
+    t.integer "price", null: false
     t.index ["item_id"], name: "index_records_on_item_id"
     t.index ["user_id"], name: "index_records_on_user_id"
   end

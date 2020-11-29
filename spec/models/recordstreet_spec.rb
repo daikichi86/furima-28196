@@ -9,29 +9,11 @@ RSpec.describe Recordstreet, type: :model do
     it 'すべての値が正しく入力されていれば保存できること' do
       expect(@recordstreet).to be_valid
     end
-
-    it 'カード番号が空だと保存できないこと' do
-      @recordstreet.number = nil
+    
+    it 'トークンが空だと登録できないこと' do
+      @recordstreet.token = nil
       @recordstreet.valid?
-      expect(@recordstreet.errors.full_messages).to include("Number can't be blank")
-    end
-
-    it '登録月が空だと登録できないこと' do
-      @recordstreet.exp_month = nil
-      @recordstreet.valid?
-      expect(@recordstreet.errors.full_messages).to include("Exp month can't be blank")
-    end
-
-    it '登録年が空だと登録できないこと' do
-      @recordstreet.exp_year = nil
-      @recordstreet.valid?
-      expect(@recordstreet.errors.full_messages).to include("Exp year can't be blank")
-    end
-
-    it 'セキュリティコードが空だと登録できないこと' do
-      @recordstreet.cvc = nil
-      @recordstreet.valid?
-      expect(@recordstreet.errors.full_messages).to include("Cvc can't be blank")
+      expect(@recordstreet.errors.full_messages).to include("Token can't be blank")
     end
 
     it '郵便番号が空だと登録できないこと' do
@@ -81,5 +63,13 @@ RSpec.describe Recordstreet, type: :model do
       @recordstreet.valid?
       expect(@recordstreet.errors.full_messages).to include("Phone number Input only number")
     end
+
+    it '金額が空だと登録できないこと' do
+      @recordstreet.price = nil
+      binding.pry
+      @recordstreet.valid?
+      expect(@recordstreet.errors.full_messages).to include("Price can't be blank")
+    end
+
   end
 end
