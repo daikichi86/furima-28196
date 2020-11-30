@@ -66,7 +66,6 @@ RSpec.describe Recordstreet, type: :model do
 
     it '金額が空だと登録できないこと' do
       @recordstreet.price = nil
-      binding.pry
       @recordstreet.valid?
       expect(@recordstreet.errors.full_messages).to include("Price can't be blank")
     end
