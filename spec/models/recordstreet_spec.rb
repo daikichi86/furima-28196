@@ -51,6 +51,12 @@ RSpec.describe Recordstreet, type: :model do
       @recordstreet.valid?
       expect(@recordstreet.errors.full_messages).to include("Addresses can't be blank")
     end
+
+    it '建物が空でも保存できること' do
+      @recordstreet.building = ""
+      binding.pry
+      expect(@recordstreet).to be_valid
+    end
     
     it '電話番号が空だと登録できないこと' do
       @recordstreet.phone_number = nil

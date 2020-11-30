@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :insert_params_id, only: [:show, :edit, :update, :destroy]
+  before_action :item_find, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.includes(:user).order("id DESC")
@@ -49,7 +49,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:image, :name, :info, :category_id, :sales_status_id, :shipping_fee_status_id, :prefecture_id, :scheduled_delivery_id, :price).merge(user_id: current_user.id)
   end
 
-  def insert_params_id
+  def item_find
     @item = Item.find(params[:id])
   end
 

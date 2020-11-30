@@ -10,7 +10,7 @@ class Recordstreet
     validates :city
     validates :addresses
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "Input only number"}
-    validates :price, presence: true
+    validates :price
   end
   
   def save
