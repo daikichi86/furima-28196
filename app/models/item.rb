@@ -25,5 +25,5 @@ class Item < ApplicationRecord
  
   belongs_to :user
   has_one :record
-  
+  has_many :comments, dependent: :destroy
 end
