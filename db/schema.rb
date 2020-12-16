@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_215212) do
+ActiveRecord::Schema.define(version: 2020_12_16_015545) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -62,6 +62,15 @@ ActiveRecord::Schema.define(version: 2020_12_07_215212) do
     t.index ["user_id"], name: "index_records_on_user_id"
   end
 
+  create_table "sns_credentials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+  end
+
   create_table "streets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "postal_code", null: false
     t.integer "prefecture_id", null: false
@@ -97,5 +106,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_215212) do
   add_foreign_key "items", "users"
   add_foreign_key "records", "items"
   add_foreign_key "records", "users"
+  add_foreign_key "sns_credentials", "users"
   add_foreign_key "streets", "records"
 end
