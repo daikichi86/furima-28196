@@ -26,4 +26,13 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one :record
   has_many :comments, dependent: :destroy
+
+  def self.search(search)
+    if search != ""
+      Item.where('info LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
+  
 end
